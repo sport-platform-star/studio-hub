@@ -1,0 +1,13 @@
+{
+  "name": "studio-hub",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "sync": "node scripts/sync.mjs",
+    "preview": "node scripts/sync.mjs --plain && npx --yes serve site"
+  },
+  "dependencies": {
+    "marked": "^14.1.0",
+    "yaml": "^2.6.0"
+  }
+}

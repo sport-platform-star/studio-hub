@@ -1,0 +1,85 @@
+{
+  "title": "Studio Hub",
+  "historyDays": 45,
+  "doneVisibleDays": 14,
+  "maxBranches": 40,
+  "games": [
+    {
+      "slug": "run-rix-run",
+      "name": "Run Rix Run",
+      "tagline": "Мобильный 3D-раннер (Unity 6): рысь Rix, 3 полосы, уровни, боссы",
+      "repo": "sport-platform-star/My-project",
+      "accent": "#dd5b1f",
+      "docs": {
+        "about": [
+          "Docs/Design/GDD.md",
+          "Docs/Design/Plan/README.md"
+        ],
+        "brand": [
+          "Docs/Brand/brand-book.md",
+          "Docs/Brand/README.md"
+        ],
+        "decisions": [
+          "Docs/Design/Plan/decisions.md"
+        ],
+        "journal": "Docs/Design/Plan/journal.md"
+      },
+      "tokens": "Docs/Brand/tokens.json",
+      "images": [
+        {
+          "path": "Docs/Brand/logos/run-rix-run-logo.svg",
+          "caption": "Логотип (временный, D-31)"
+        },
+        {
+          "path": "Docs/Brand/character/rix-model-sheet.jpg",
+          "caption": "Rix — model sheet"
+        }
+      ],
+      "links": [
+        {
+          "label": "Brand guidebook",
+          "url": "https://github.com/sport-platform-star/rix-guidebook"
+        }
+      ],
+      "docRefs": [
+        "frost-fair",
+        "main"
+      ],
+      "catalog": "hub/catalog",
+      "scores": "hub/scores.jsonl",
+      "branches": "all"
+    },
+    {
+      "slug": "rolo-crate-rush",
+      "name": "ROLO: Crate Rush",
+      "tagline": "3D-платформер: енот-игрушка Rolo, ящики, спин-атака. Unity 6",
+      "repo": "sport-platform-star/rush",
+      "accent": "#66F5DD",
+      "docs": {
+        "about": [
+          "docs/00-vision.md",
+          "docs/01-gdd.md",
+          "docs/04-market.md"
+        ],
+        "brand": [
+          "docs/02-art-style.md",
+          "docs/06-text-bible.md"
+        ],
+        "decisions": [
+          "docs/03-decisions.md"
+        ],
+        "journal": "docs/10-journal.md"
+      },
+      "paletteFrom": "docs/02-art-style.md",
+      "images": [],
+      "links": [],
+      "docRefs": [
+        "main"
+      ],
+      "catalog": "hub/catalog",
+      "scores": "hub/scores.jsonl",
+      "branches": "all"
+    }
+  ],
+  "qualityGate": 9.0
+}

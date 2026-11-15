@@ -1,0 +1,47 @@
+name: Sync hub
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"     # GitHub runs scheduled jobs best-effort: usually every 15–30 min
+  workflow_dispatch:            # "Run workflow" button = sync now
+  repository_dispatch:
+    types: [game-updated]       # optional instant trigger from a game repo (see README)
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: hub-pages
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-24.04
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --no-audit --no-fund
+      - name: Read the game repos
+        env:
+          HUB_TOKEN: ${{ secrets.HUB_TOKEN }}
+          HUB_PASSPHRASE: ${{ secrets.HUB_PASSPHRASE }}
+        run: |
+          test -n "$HUB_TOKEN" || { echo "::error::Secret HUB_TOKEN is missing (README, step 2)"; exit 1; }
+          test -n "$HUB_PASSPHRASE" || { echo "::error::Secret HUB_PASSPHRASE is missing (README, step 3)"; exit 1; }
+          node scripts/sync.mjs
+          rm -f site/data/hub.json
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - id: deploy
+        uses: actions/deploy-pages@v4

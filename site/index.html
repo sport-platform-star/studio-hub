@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Studio Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="#/">Studio Hub</a>
+    <nav id="game-nav"></nav>
+    <span id="updated" class="muted"></span>
+  </header>
+
+  <section id="lock" class="lock" hidden>
+    <form id="lock-form">
+      <h1>Studio Hub</h1>
+      <p class="muted">Данные зашифрованы. Введите пароль хаба.</p>
+      <input id="pass" type="password" autocomplete="current-password" placeholder="Пароль" required>
+      <label class="check"><input id="remember" type="checkbox" checked> запомнить на этом устройстве</label>
+      <button type="submit">Открыть</button>
+      <p id="lock-err" class="err" hidden>Неверный пароль</p>
+    </form>
+  </section>
+
+  <main id="app"><p class="muted pad">Загрузка…</p></main>
+  <script src="app.js"></script>
+</body>
+</html>
