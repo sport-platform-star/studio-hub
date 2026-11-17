@@ -3,7 +3,7 @@
 Один сайт для всех игр студии: **доска задач, прогресс по дням, оценки по аспектам, каталог игры (карты, модели,
 герои, механики, HUD, меню), журнал действий, журнал сессий, описание игры, фирстиль, решения**.
 
-Сейчас подключены: **Run Rix Run** (`sport-platform-star/My-project`) и **ROLO: Crate Rush** (`sport-platform-star/rush`).
+Сейчас подключены: **Run Rix Run** (`sport-platform-star/My-project`), **ROLO: Crate Rush** (`sport-platform-star/rush`) и **Часовые острова** (`sport-platform-star/clockwork-islands`).
 
 ## Как это работает
 
