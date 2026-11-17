@@ -79,6 +79,36 @@
       "catalog": "hub/catalog",
       "scores": "hub/scores.jsonl",
       "branches": "all"
+    },
+    {
+      "slug": "clockwork-islands",
+      "name": "Часовые острова",
+      "tagline": "3D-платформер: герой поднимается по гигантским часам и на каждом уровне собирает и запускает большой механизм",
+      "repo": "sport-platform-star/clockwork-islands",
+      "accent": "#888888",
+      "docs": {
+        "about": [
+          "README.md",
+          "docs/00-vision.md",
+          "docs/01-design-guide.md"
+        ],
+        "brand": [
+          "docs/02-art-style.md",
+          "docs/06-text-bible.md"
+        ],
+        "decisions": [
+          "docs/03-decisions.md"
+        ],
+        "journal": "docs/10-journal.md"
+      },
+      "images": [],
+      "links": [],
+      "docRefs": [
+        "main"
+      ],
+      "catalog": "hub/catalog",
+      "scores": "hub/scores.jsonl",
+      "branches": "all"
     }
   ],
   "qualityGate": 9.0
